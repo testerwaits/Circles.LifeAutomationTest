@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testData>
+
+	<data name="port">
+		<value>4743</value>
+	</data>
+		
+	<data name="bootstrapport">
+		<value>4745</value>
+	</data>	
+	
+	<data name="deviceName">
+		<value>oneplus</value>
+	</data>
+	
+	<data name="udid">
+		<value>7413475c</value>
+	</data>
+
+	<data name="pltVersion">
+		<value>6.0.1</value>
+	</data>
+	
+	<data name="url">
+		<value>127.0.0.1:4743/wd/hub</value>
+	</data>	
+	
+	<data name="platform">
+		<value>android</value>
+	</data>	
+	
+	<data name="apkName">
+		<value>facebook.apk</value>
+	</data>
+	
+	<data name="packageName">
+		<value>com.facebook.katana</value>
+	</data>
+	
+	<data name="appActivity">
+		<value>com.facebook.katana.LoginActivity</value>
+	</data>
+	
+	<data name="nodePath">
+		<value>C:\\Program Files\\nodejs\\node.exe</value>
+	</data>
+	
+	<data name="appiumPath">
+		<value>C:\\Users\\suraj.vijayaraghavan\\AppData\\Local\\Programs\\appium-desktop\\resources\\app\\node_modules\\appium\\build\\lib\\main.js</value>
+	</data>
+	
+	
+	
+	<data name="Website_URL">
+		<value>https://pages.circles.life/</value>
+	</data>
+	
+	<data name="Browser">
+		<value>chrome</value>
+	</data>
+
+		
+</testData>
