@@ -55,7 +55,7 @@ public class FacebookAutomationTestCase {
 		objFacebookWebsiteHomePage.postMessageInFacebook(fbPostMessage);
 	}
 	
-	@Test(priority = 3, enabled= true)
+	@Test(priority = 3, enabled= false)
 	public void verifyAppiumConnectionAndAppLuanch() 
 	{	//Start Appium Session and Create App Instance
 		service=TestRunner.createAppiumSession();
@@ -69,14 +69,14 @@ public class FacebookAutomationTestCase {
 		Assert.assertTrue(mobiledriver!=null);
 	}
 
-	@Test(priority = 4,  enabled= true)
+	@Test(priority = 4,  enabled= false)
 	public void verifyFacebookLoginTest()
 	{		
 		objFacebookLoginPage.loginToFacebook();
 		objFacebookHomePage.verifySuccessfulLogin();
 	}
 	
-	@Test(priority = 5,  enabled= true)
+	@Test(priority = 5,  enabled= false)
 	public void verifyLatestPostFromActivityLog()
 	{
 		objFacebookHomePage.accessFacebookProfile();		
