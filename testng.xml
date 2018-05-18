@@ -7,6 +7,5 @@
       <class name="com.circlesLife.TestCases.FacebookAutomationTestCase"/> 
     </classes>
   </test> <!-- Test -->
-  
-  
+    
 </suite> <!-- Suite -->
