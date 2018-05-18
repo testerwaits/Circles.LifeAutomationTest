@@ -14,6 +14,7 @@ import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class TestRunner 
@@ -42,8 +43,10 @@ public class TestRunner
 		if(browserName.equalsIgnoreCase("chrome"))
 		{			
 			String exePath = driverPath+"/chromedriver.exe";
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--disable-notifications");
 			System.setProperty("webdriver.chrome.driver", exePath);
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 		}
 		else
 		{

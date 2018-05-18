@@ -55,6 +55,10 @@
 		<value>https://pages.circles.life/</value>
 	</data>
 	
+	<data name="Facebook_URL">
+		<value>https://www.facebook.com/</value>
+	</data>
+	
 	<data name="Browser">
 		<value>chrome</value>
 	</data>

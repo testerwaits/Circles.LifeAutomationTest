@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,12 +102,12 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.circlesLife.TestCases.FacebookAutomationTestCase" hash-for-method="verifyAppiumConnectionAndAppLuanch">verifyAppiumConnectionAndAppLuanch</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.circlesLife.TestCases.FacebookAutomationTestCase" hash-for-method="addNewPostInFacebook">addNewPostInFacebook</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.circlesLife.TestCases.FacebookAutomationTestCase" hash-for-method="verifyFacebookLoginTest">verifyFacebookLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.circlesLife.TestCases.FacebookAutomationTestCase" hash-for-method="verifyLatestPostFromActivityLog">verifyLatestPostFromActivityLog</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -121,12 +121,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.circlesLife.TestCases.CirclesLifeAutomationTestCases" hash-for-method="loginToCirclesLifeWebsite">loginToCirclesLifeWebsite</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.circlesLife.TestCases.FacebookAutomationTestCase" hash-for-method="loginToFacebookWebsite">loginToFacebookWebsite</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.circlesLife.TestCases.CirclesLifeAutomationTestCases" hash-for-method="verifyWebsiteLaunch">verifyWebsiteLaunch</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.circlesLife.TestCases.FacebookAutomationTestCase" hash-for-method="verifyAppiumConnectionAndAppLuanch">verifyAppiumConnectionAndAppLuanch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.circlesLife.TestCases.FacebookAutomationTestCase" hash-for-method="verifyFacebookLoginTest">verifyFacebookLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -149,41 +154,83 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyAppiumConnectionAndAppLuanch">
-                  </a> <!-- verifyAppiumConnectionAndAppLuanch -->
-                  <span class="method-name">verifyAppiumConnectionAndAppLuanch</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.11 seconds
+                  <a name="addNewPostInFacebook">
+                  </a> <!-- addNewPostInFacebook -->
+                  <span class="method-name">addNewPostInFacebook</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //button[@data-testid=&apos;react-composer-post-button&apos;]&apos;
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;CS-075-LT-WS&apos;, ip: &apos;169.254.202.181&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb), userDataDir=C:\Users\SURAJ~1.VIJ\AppData\Local\Temp\scoped_dir5704_19220}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=66.0.3359.139, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 541c193ecba0b0a5605ba09c7bf0b4a1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.facebook.Pages.FacebookWebsiteHomePage.postMessageInFacebook(FacebookWebsiteHomePage.java:46)
+	at com.circlesLife.TestCases.FacebookAutomationTestCase.addNewPostInFacebook(FacebookAutomationTestCase.java:55)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@data-testid=&apos;react-composer-post-button&apos;]&quot;}
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 17 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;CS-075-LT-WS&apos;, ip: &apos;169.254.202.181&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb), userDataDir=C:\Users\SURAJ~1.VIJ\AppData\Local\Temp\scoped_dir5704_19220}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=66.0.3359.139, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 541c193ecba0b0a5605ba09c7bf0b4a1
+*** Element info: {Using=xpath, value=//button[@data-testid=&apos;react-composer-post-button&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 26 more
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLatestPostFromActivityLog">
+                  </a> <!-- verifyLatestPostFromActivityLog -->
+                  <span class="method-name">verifyLatestPostFromActivityLog</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.SessionNotFoundException: A session is either terminated or not started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 5 milliseconds
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;CS-075-LT-WS&apos;, ip: &apos;169.254.202.181&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_91&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.facebook.katana, app=E:\suraj\Circles.LifeAutomationTest\circlesLifeAutomationTest\apk\facebook.apk, deviceScreenSize=1080x1920, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, locale=US, deviceName=7413475c, deviceReadyTimeout=450, platform=ANDROID, deviceUDID=7413475c, appActivity=com.facebook.katana.LoginActivity, desired={appPackage=com.facebook.katana, appActivity=com.facebook.katana.LoginActivity, app=E:\suraj\Circles.LifeAutomationTest\circlesLifeAutomationTest\apk\facebook.apk, noReset=true, newCommandTimeout=60000, platformVersion=6.0.1, udid=7413475c, locale=US, platformName=Android, deviceName=oneplus, deviceReadyTimeout=450, platform=ANDROID}, newCommandTimeout=60000, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=ONE A2003, udid=7413475c, platformName=Android, deviceManufacturer=OnePlus}]
+Session ID: f349ffa9-8dbc-4cc9-9fe2-5deebae02833
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:36)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:114)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:132)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)
-	at com.circlesLife.Utils.TestRunner.createInstance(TestRunner.java:90)
-	at com.circlesLife.TestCases.FacebookAutomationTestCase.verifyAppiumConnectionAndAppLuanch(FacebookAutomationTestCase.java:30)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyFacebookLoginTest">
-                  </a> <!-- verifyFacebookLoginTest -->
-                  <span class="method-name">verifyFacebookLoginTest</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.circlesLife.TestCases.FacebookAutomationTestCase.verifyFacebookLoginTest(FacebookAutomationTestCase.java:44)
-... Removed 24 stack frames
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:865)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.changeImplicitlyWaitTimeOut(AppiumElementLocator.java:75)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:92)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:103)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:57)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.toString(&lt;generated&gt;)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at com.facebook.Pages.FacebookAppHomePage.accessActivityLog(FacebookAppHomePage.java:48)
+	at com.circlesLife.TestCases.FacebookAutomationTestCase.verifyLatestPostFromActivityLog(FacebookAutomationTestCase.java:83)
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -192,21 +239,28 @@ Driver info: io.appium.java_client.android.AndroidDriver
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.circlesLife.TestCases.CirclesLifeAutomationTestCases</span>
+              <span class="class-name">com.circlesLife.TestCases.FacebookAutomationTestCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginToCirclesLifeWebsite">
-                  </a> <!-- loginToCirclesLifeWebsite -->
-                  <span class="method-name">loginToCirclesLifeWebsite</span>
+                  <a name="loginToFacebookWebsite">
+                  </a> <!-- loginToFacebookWebsite -->
+                  <span class="method-name">loginToFacebookWebsite</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyWebsiteLaunch">
-                  </a> <!-- verifyWebsiteLaunch -->
-                  <span class="method-name">verifyWebsiteLaunch</span>
+                  <a name="verifyAppiumConnectionAndAppLuanch">
+                  </a> <!-- verifyAppiumConnectionAndAppLuanch -->
+                  <span class="method-name">verifyAppiumConnectionAndAppLuanch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFacebookLoginTest">
+                  </a> <!-- verifyFacebookLoginTest -->
+                  <span class="method-name">verifyFacebookLoginTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -223,7 +277,6 @@ Driver info: io.appium.java_client.android.AndroidDriver
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;test name=&quot;Test1&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.circlesLife.TestCases.CirclesLifeAutomationTestCases&quot;/&gt;
       &lt;class name=&quot;com.circlesLife.TestCases.FacebookAutomationTestCase&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
@@ -238,7 +291,7 @@ Driver info: io.appium.java_client.android.AndroidDriver
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test1 (2 classes)</span>
+                <span class="test-name">Test1 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -264,28 +317,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyAppiumConnectionAndAppLuanch')
+data.setCell(0, 1, 'loginToFacebookWebsite')
 data.setCell(0, 2, 'com.circlesLife.TestCases.FacebookAutomationTestCase')
-data.setCell(0, 3, 39337);
+data.setCell(0, 3, 47953);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginToCirclesLifeWebsite')
-data.setCell(1, 2, 'com.circlesLife.TestCases.CirclesLifeAutomationTestCases')
-data.setCell(1, 3, 5761);
+data.setCell(1, 1, 'verifyFacebookLoginTest')
+data.setCell(1, 2, 'com.circlesLife.TestCases.FacebookAutomationTestCase')
+data.setCell(1, 3, 40517);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyWebsiteLaunch')
-data.setCell(2, 2, 'com.circlesLife.TestCases.CirclesLifeAutomationTestCases')
-data.setCell(2, 3, 112);
+data.setCell(2, 1, 'verifyLatestPostFromActivityLog')
+data.setCell(2, 2, 'com.circlesLife.TestCases.FacebookAutomationTestCase')
+data.setCell(2, 3, 37273);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyFacebookLoginTest')
+data.setCell(3, 1, 'addNewPostInFacebook')
 data.setCell(3, 2, 'com.circlesLife.TestCases.FacebookAutomationTestCase')
-data.setCell(3, 3, 4);
+data.setCell(3, 3, 30914);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyAppiumConnectionAndAppLuanch')
+data.setCell(4, 2, 'com.circlesLife.TestCases.FacebookAutomationTestCase')
+data.setCell(4, 3, 30297);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 45 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -311,35 +368,36 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.circlesLife.TestCases.CirclesLifeAutomationTestCases</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.circlesLife.TestCases.FacebookAutomationTestCase</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">verifyWebsiteLaunch</span>
+                <span class="method-name">loginToFacebookWebsite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">loginToCirclesLifeWebsite</span>
-                <span class="method-start">115 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.circlesLife.TestCases.FacebookAutomationTestCase</div> <!-- chronological-class-name -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
+                <span class="method-name">addNewPostInFacebook</span>
+                <span class="method-start">47958 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">verifyAppiumConnectionAndAppLuanch</span>
-                <span class="method-start">5881 ms</span>
+                <span class="method-start">78890 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyFacebookLoginTest</span>
+                <span class="method-start">109193 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyFacebookLoginTest</span>
-                <span class="method-start">45233 ms</span>
+                <span class="method-name">verifyLatestPostFromActivityLog</span>
+                <span class="method-start">149713 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">end</span>
-                <span class="method-start">45241 ms</span>
+                <span class="method-start">186992 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

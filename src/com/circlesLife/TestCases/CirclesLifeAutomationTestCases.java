@@ -8,10 +8,9 @@ import org.testng.annotations.Test;
 
 import com.circlesLife.Pages.CirclesLifeHomePage;
 import com.circlesLife.Pages.CirclesLifeLoginPage;
+import com.circlesLife.Pages.CirclesLifeMyAccountPage;
 import com.circlesLife.Utils.TestRunner;
 import com.circlesLife.Utils.Utils;
-
-
 
 
 public class CirclesLifeAutomationTestCases 
@@ -27,6 +26,8 @@ public class CirclesLifeAutomationTestCases
 	
 	CirclesLifeHomePage objCirclesLifeHomePage = PageFactory.initElements(driver, CirclesLifeHomePage.class);
 	CirclesLifeLoginPage objCirclesLifeLoginPage = PageFactory.initElements(driver, CirclesLifeLoginPage.class);
+	CirclesLifeMyAccountPage objCirclesLifeMyAccountPage = PageFactory.initElements(driver, CirclesLifeMyAccountPage.class);
+	
 	
 	@Test(priority = 1)
 	public void verifyWebsiteLaunch()
@@ -36,23 +37,32 @@ public class CirclesLifeAutomationTestCases
 		
 	}	
 	
-	@Test(priority = 2)
-	public void loginToCirclesLifeWebsite()
+	@Test(priority = 2,dataProvider="UserCredentials")
+	public void loginToCirclesLifeWebsite(String userEmail,String userPassword)
 	{
 		objCirclesLifeHomePage.accessLoginPage();
 		objCirclesLifeLoginPage.verifyLoginPage();
-		objCirclesLifeLoginPage.loginToWebsite();
+		objCirclesLifeLoginPage.loginToWebsite(userEmail, userPassword);
+		objCirclesLifeHomePage.verifySuccessfulLogin();
+	}
+	
+	@Test(priority = 3)
+	public void verifyUserNameInMyAccountPage()
+	{
+		objCirclesLifeHomePage.accessMyAccountPage();
+		objCirclesLifeMyAccountPage.verifyMyAccountPage();
+		objCirclesLifeMyAccountPage.verifyUserNameInMyAccountPage();
 	}
 	
 	// If we need to Pass multiple Credentials for Login Test we can Pass Using This Data Provider	
 	@DataProvider(name="UserCredentials")
 	public Object[][] getLoginTestData()
 	{
-		// Create object with two paraments			
-		Object[][] data = new Object[2][2];
+		// Create object with one paraments			
+		Object[][] data = new Object[1][2];
 		
-		data[0][0] = Utils.getTestData("LoginPage.InvalidUser_Email1");
-		data[0][1] = Utils.getTestData("LoginPage.InvalidUser_Password1");
+		data[0][0] = Utils.getTestData("CirclesLifeLoginPage.UserName");
+		data[0][1] = Utils.getTestData("CirclesLifeLoginPage.UserPassword");
 				
 		return data;
 	}

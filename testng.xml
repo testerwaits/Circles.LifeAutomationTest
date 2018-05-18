@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test name="Test1">
     <classes>
-      <class name="com.circlesLife.TestCases.CirclesLifeAutomationTestCases"/>
-      <class name="com.circlesLife.TestCases.FacebookAutomationTestCase"/>
+      <class name="com.circlesLife.TestCases.CirclesLifeAutomationTestCases"/> 
+      <class name="com.circlesLife.TestCases.FacebookAutomationTestCase"/> 
     </classes>
   </test> <!-- Test -->
   

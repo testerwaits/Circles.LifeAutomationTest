@@ -3,7 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test1">
     <classes>
-      <class name="com.circlesLife.TestCases.CirclesLifeAutomationTestCases"/>
       <class name="com.circlesLife.TestCases.FacebookAutomationTestCase"/>
     </classes>
   </test> <!-- Test1 -->
@@ -11,9 +10,9 @@
     <classes>
       <class name="com.circlesLife.TestCases.FacebookAutomationTestCase">
         <methods>
-          <include name="verifyFacebookLoginTest"/>
+          <include name="addNewPostInFacebook"/>
+          <include name="verifyLatestPostFromActivityLog"/>
           <include name="end"/>
-          <include name="verifyAppiumConnectionAndAppLuanch"/>
         </methods>
       </class> <!-- com.circlesLife.TestCases.FacebookAutomationTestCase -->
     </classes>
